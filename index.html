@@ -3,16 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My First Website</title>
+  <title>주종별 가게 찾기</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="top">
-    <h1>안녕, 첫 웹사이트!</h1>
-    <p>VS Code로 만들고 있어요.</p>
-    <button id="btn">클릭해봐</button>
-  </header>
+  <div class="container">
+    <header class="header">
+      <h1>주종별 가게 찾기</h1>
+      <p class="sub">버튼을 눌러 주종을 선택하면, 해당 주종을 파는 가게 목록이 보여요.</p>
+    </header>
+
+    <!-- 화면 1: 카테고리 -->
+    <main id="screen-category" class="card">
+      <h2>주종 선택</h2>
+      <div id="category-buttons" class="grid"></div>
+    </main>
+
+    <!-- 화면 2: 가게 목록 -->
+    <main id="screen-shops" class="card hidden">
+      <div class="shops-top">
+        <button id="back-btn" class="btn ghost">← 뒤로</button>
+        <h2 id="shops-title">가게 목록</h2>
+      </div>
+
+      <ul id="shop-list" class="list"></ul>
+    </main>
+
+    <footer class="footer">
+      <small>연습용 프로젝트 · HTML/CSS/JS</small>
+    </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
